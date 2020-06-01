@@ -1,13 +1,13 @@
 # Tensorflow-Keras
 
-安裝 Nvidia 顯卡驅動
-每張顯卡版本不同，這邊是1050
-設置環境變數
-nvcc -V
-V10.1.243
-這邊要注意如果裝CUDA 10以上 tensorflow至少要>=2.1.0，不然執行tensorflow會error
+<br>安裝 Nvidia 顯卡驅動<br>
+每張顯卡版本不同，這邊是1050<br>
+設置環境變數<br>
+nvcc -V<br>
+V10.1.243<br>
+這邊要注意如果裝CUDA 10以上 tensorflow至少要>=2.1.0，不然執行tensorflow會error<br>
 
-nvidia-smi
+nvidia-smi<br>
 
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 441.45       Driver Version: 441.45       CUDA Version: 10.2     |
