@@ -3,22 +3,25 @@
 <br>安裝 Nvidia 顯卡驅動<br>
 每張顯卡版本不同，這邊是1050<br>
 設置環境變數<br>
-nvcc -V<br>
-V10.1.243<br>
+
+    nvcc -V
+    V10.1.243
 這邊要注意如果裝CUDA 10以上 tensorflow至少要>=2.1.0，不然執行tensorflow會error<br>
 
-nvidia-smi<br>
+開啟CMD輸入以下指令，如果環境變數有設好則會執行
+    nvidia-smi<br>
 會列出顯卡資訊<br>
 
-pip install tensorflow<br>
-pip install keras <br>
-conda install cudnn=7.6.5<br>
+# python環境
+    pip install tensorflow
+    pip install keras 
+    conda install cudnn=7.6.5
 
-open jupyter-notebook<br>
+open jupyter-notebook
 
-from tensorflow.python.client import device_lib<br>
+    from tensorflow.python.client import device_lib<br>
 
-device_lib.list_local_devices()<br>
+    device_lib.list_local_devices()<br>
 列出所有cpu與gpu<br>
 
 tensorflow2.0以下就不列了網路上到處都有<br>
