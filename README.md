@@ -42,3 +42,11 @@ sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(<br>
 然後設置keras GPU進行traing後打開cmd>nvidia-smi
 
 就能看到Processes再跑了<br>
+
+# Keras load model Error
+AttributeError: module 'tensorflow' has no attribute 'placeholder'
+
+重新安裝
+pip uninstall tensorflow tensorboard tensorboard-plugin-wit tensorflow-estimator keras tensorflow-gpu tensorflow-gpu-estimator-2.2.0
+
+pip install tensorflow tensorboard tensorboard-plugin-wit tensorflow-estimator keras tensorflow-gpu tensorflow-gpu-estimator-2.2.0
