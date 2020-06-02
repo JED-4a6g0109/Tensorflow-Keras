@@ -26,18 +26,18 @@ tensorflow2.0以下就不列了網路上到處都有<br>
 https://www.tensorflow.org/api_docs/python/tf/compat/v1/Session<br>
 tensorflow2.0以上代碼<br>
 
-import tensorflow as tf<br>
-import os<br>
-msg = tf.constant('Hello, TensorFlow!')<br>
-tf.print(msg)<br>
+    import tensorflow as tf
+    import os
+    msg = tf.constant('Hello, TensorFlow!')
+    tf.print(msg)
 
-os.environ["CUDA_VISIBLE_DEVICES"]="0"<br>
-gpu_options = tf.compat.v1.GPUOptions(allow_growth=True)<br>
+    os.environ["CUDA_VISIBLE_DEVICES"]="0"
+    gpu_options = tf.compat.v1.GPUOptions(allow_growth=True)
 
 
-sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(<br>
-    gpu_options = gpu_options,<br>
-    log_device_placement=True))<br><br>
+    sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(
+    gpu_options = gpu_options,
+    log_device_placement=True))
     
 然後設置keras GPU進行traing後打開cmd>nvidia-smi
 
@@ -46,7 +46,7 @@ sess = tf.compat.v1.Session(config=tf.compat.v1.ConfigProto(<br>
 # Keras load model Error
 AttributeError: module 'tensorflow' has no attribute 'placeholder'
 
-重新安裝
-pip uninstall tensorflow tensorboard tensorboard-plugin-wit tensorflow-estimator keras tensorflow-gpu tensorflow-gpu-estimator-2.2.0
+重新安裝<br>
 
-pip install tensorflow tensorboard tensorboard-plugin-wit tensorflow-estimator keras tensorflow-gpu tensorflow-gpu-estimator-2.2.0
+    pip uninstall tensorflow tensorboard tensorboard-plugin-wit tensorflow-estimator keras tensorflow-gpu tensorflow-gpu-estimator-2.2.0
+    pip install tensorflow tensorboard tensorboard-plugin-wit tensorflow-estimator keras tensorflow-gpu tensorflow-gpu-estimator-2.2.0
